@@ -10,7 +10,7 @@ const override = (config) => {
     new ModuleFederationPlugin({
       name: 'host',
       remotes: {
-        app1:
+        movies:
           process.env.NODE_ENV === 'production'
             ? process.env.REMOTE_PRODUCTION_APP_ONE
             : process.env.REMOTE_DEV_APP_ONE,
