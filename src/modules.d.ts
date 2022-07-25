@@ -1,3 +1,4 @@
 /// <reference types="react-scripts" />
 
-declare module 'movies/Example';
+declare module 'movies/MoviesList';
+declare module 'movies/Movies';

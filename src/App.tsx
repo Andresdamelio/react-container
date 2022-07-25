@@ -1,15 +1,20 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
-const Example = React.lazy(() => import('movies/Example'));
+import { Layout } from './layout';
+
+import Loader from './components/Loader';
+const Movies = React.lazy(() => import('movies/Movies'));
 
 const App = () => {
+  const { i18n } = useTranslation();
   return (
-    <div>
-      Container App
-      <React.Suspense fallback={'Cargando'}>
-        <Example />
+    <Layout>
+      <p>Container App {i18n.language}</p>
+      <React.Suspense fallback={<Loader />}>
+        <Movies lang={i18n.language} />
       </React.Suspense>
-    </div>
+    </Layout>
   );
 };
 
