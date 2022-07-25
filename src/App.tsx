@@ -10,7 +10,6 @@ const App = () => {
   const { i18n } = useTranslation();
   return (
     <Layout>
-      <p>Container App {i18n.language}</p>
       <React.Suspense fallback={<Loader />}>
         <Movies lang={i18n.language} />
       </React.Suspense>

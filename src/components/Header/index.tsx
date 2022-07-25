@@ -5,7 +5,8 @@ import {
   HeaderContainer,
   LanguageSelector,
   Title,
-  BrandContainer
+  BrandContainer,
+  Image
 } from './style';
 
 const Header = () => {
@@ -15,7 +16,7 @@ const Header = () => {
     <HeaderContainer>
       <HeaderBody>
         <BrandContainer>
-          <img
+          <Image
             src={require('../../assets/img/logo-n5.svg').default}
             alt='logo'
           />

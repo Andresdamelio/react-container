@@ -25,4 +25,8 @@ export const FooterText = styled.h3`
   font-size: 1rem;
   text-align: center;
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+  }
 `;

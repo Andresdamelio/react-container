@@ -6,6 +6,7 @@ export const HeaderContainer = styled.header`
   border-bottom-style: solid;
   border-bottom-color: rgb(255 255 255 / 0.2);
   background: rgb(18 24 41 / 1);
+  margin-bottom: 2.5rem;
 `;
 
 export const HeaderBody = styled.section`
@@ -36,9 +37,21 @@ export const Title = styled.h1`
   font-size: 2rem;
   margin: 0;
   margin-left: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const BrandContainer = styled.div`
   display: flex;
   align-items: center;
+`;
+
+export const Image = styled.img`
+  height: 2.5rem;
+
+  @media (max-width: 768px) {
+    height: 1.5rem;
+  }
 `;
