@@ -2,5 +2,10 @@
   "title": "Challenge",
   "es": "Spanish",
   "en": "Enlish",
-  "rights": "All rights reserved" 
+  "rights": "All rights reserved",
+  "movies": "Movies",
+  "tv": "Tv shows",
+  "moviesTitle": "List of popular movies",
+  "tvTitles": "List of popular tv shows",
+  "clean": "Clean"
 }

@@ -44,5 +44,23 @@ export const Button = styled.button`
     `};
 `;
 
+export const List: any = styled.section`
+  display: block;
+  width: 100%;
+`;
+
+export const Body: any = styled.section`
+  display: flex;
+`;
+
+export const Title = styled.h2`
+  font-family: sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+`;
+
+List.Body = Body;
+List.Title = Title;
 Container.Group = Group;
 Container.Button = Button;

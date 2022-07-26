@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Layout } from './layout';
-import { Container } from './style';
+import { Container, List, Title, Body } from './style';
 import Loader from './components/Loader';
 
 const Movies = React.lazy(() => import('movies/Movies'));
@@ -10,7 +10,8 @@ const ShowList = React.lazy(() => import('tv/ShowList'));
 
 const App = () => {
   const [type, setType] = useState<'movies' | 'tv' | undefined>(undefined);
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
+
   return (
     <Layout>
       <Container>
@@ -20,26 +21,36 @@ const App = () => {
             mright
             onClick={() => setType('movies')}
           >
-            Listado de peliculas
+            {t('movies')}
           </Container.Button>
 
           <Container.Button
             active={type === 'tv'}
             onClick={() => setType('tv')}
           >
-            Listado de shows de tv
+            {t('tv')}
           </Container.Button>
         </Container.Group>
         {type !== undefined ? (
           <Container.Button onClick={() => setType(undefined)}>
-            Limpiar
+            {t('clean')}
           </Container.Button>
         ) : null}
       </Container>
 
       <React.Suspense fallback={<Loader />}>
-        {type === 'movies' ? <Movies lang={i18n.language} /> : null}
-        {type === 'tv' ? <ShowList lang={i18n.language} /> : null}
+        <List>
+          {type !== undefined && (
+            <List.Title>
+              {type === 'movies' ? t('moviesTitle') : t('tvTitles')}
+            </List.Title>
+          )}
+
+          <List.Body>
+            {type === 'tv' ? <ShowList lang={i18n.language} /> : null}
+            {type === 'movies' ? <Movies lang={i18n.language} /> : null}
+          </List.Body>
+        </List>
       </React.Suspense>
     </Layout>
   );

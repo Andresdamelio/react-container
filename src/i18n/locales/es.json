@@ -2,5 +2,10 @@
   "title": "Reto",
   "es": "Español",
   "en": "Inlges",
-  "rights": "Todos los derechos reservados" 
+  "rights": "Todos los derechos reservados",
+  "movies": "Peliculas",
+  "tv": "Shows de tv",
+  "moviesTitle": "Listado de peliculas populares",
+  "tvTitles": "Listado de shows de tv populares",
+  "clean": "Limpiar"
 }
