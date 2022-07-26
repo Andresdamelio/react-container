@@ -7,6 +7,11 @@ export const Header: any = styled.header`
   border-bottom-color: rgb(255 255 255 / 0.2);
   background: rgb(18 24 41 / 1);
   margin-bottom: 2.5rem;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
 `;
 
 export const Body = styled.section`
