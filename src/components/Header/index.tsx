@@ -1,37 +1,32 @@
 import { useTranslation } from 'react-i18next';
 
-import {
-  HeaderBody,
-  HeaderContainer,
-  LanguageSelector,
-  Title,
-  BrandContainer,
-  Image
-} from './style';
+import { Header } from './style';
 
-const Header = () => {
+const HeaderPage = () => {
   const { i18n, t } = useTranslation();
 
   return (
-    <HeaderContainer>
-      <HeaderBody>
-        <BrandContainer>
-          <Image
+    <Header>
+      <Header.Body>
+        <Header.Brand>
+          <Header.Image
             src={require('../../assets/img/logo-n5.svg').default}
             alt='logo'
           />
-          <Title>{t('title')}</Title>
-        </BrandContainer>
-        <LanguageSelector
+          <Header.Title>{t('title')}</Header.Title>
+        </Header.Brand>
+        <Header.Selector
           value={i18n.language}
-          onChange={(e) => i18n.changeLanguage(e.target.value)}
+          onChange={(e: React.MouseEvent<HTMLElement>) =>
+            i18n.changeLanguage((e.target as any).value)
+          }
         >
           <option value='es'>🇪🇸 {t('es')}</option>
           <option value='en'>🇺🇸 {t('en')}</option>
-        </LanguageSelector>
-      </HeaderBody>
-    </HeaderContainer>
+        </Header.Selector>
+      </Header.Body>
+    </Header>
   );
 };
 
-export default Header;
+export default HeaderPage;

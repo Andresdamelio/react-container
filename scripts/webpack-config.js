@@ -14,7 +14,7 @@ const override = (config) => {
           process.env.NODE_ENV === 'production'
             ? process.env.REMOTE_PRODUCTION_APP_ONE
             : process.env.REMOTE_DEV_APP_ONE,
-        app2:
+        tv:
           process.env.NODE_ENV === 'production'
             ? process.env.REMOTE_PRODUCTION_APP_TWO
             : process.env.REMOTE_DEV_APP_TWO

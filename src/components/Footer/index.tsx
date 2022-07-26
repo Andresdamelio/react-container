@@ -1,18 +1,18 @@
-import { FooterBody, FooterContainer, FooterText } from './style';
+import { Footer } from './style';
 import { useTranslation } from 'react-i18next';
 
-const Footer = () => {
+const FooterPage = () => {
   const { t } = useTranslation();
 
   return (
-    <FooterContainer>
-      <FooterBody>
-        <FooterText>
+    <Footer>
+      <Footer.Body>
+        <Footer.Text>
           {t('rights')} &copy; {new Date().getFullYear()}
-        </FooterText>
-      </FooterBody>
-    </FooterContainer>
+        </Footer.Text>
+      </Footer.Body>
+    </Footer>
   );
 };
 
-export default Footer;
+export default FooterPage;

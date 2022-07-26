@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const FooterContainer = styled.footer`
+export const Footer: any = styled.footer`
   width: 100%;
   border-top-width: 1px;
   border-top-style: solid;
@@ -9,7 +9,7 @@ export const FooterContainer = styled.footer`
   margin-top: 2.5rem;
 `;
 
-export const FooterBody = styled.div`
+export const Body = styled.div`
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
@@ -18,7 +18,7 @@ export const FooterBody = styled.div`
   padding: 20px;
 `;
 
-export const FooterText = styled.h3`
+export const Text = styled.h3`
   font-familiy: sans-serif;
   font-weight: 700;
   color: #fff;
@@ -30,3 +30,6 @@ export const FooterText = styled.h3`
     font-size: 0.7rem;
   }
 `;
+
+Footer.Body = Body;
+Footer.Text = Text;

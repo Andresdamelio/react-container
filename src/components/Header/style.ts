@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeaderContainer = styled.header`
+export const Header: any = styled.header`
   width: 100%;
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -9,7 +9,7 @@ export const HeaderContainer = styled.header`
   margin-bottom: 2.5rem;
 `;
 
-export const HeaderBody = styled.section`
+export const Body = styled.section`
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
@@ -18,7 +18,7 @@ export const HeaderBody = styled.section`
   padding: 24px;
 `;
 
-export const LanguageSelector = styled.select`
+export const Selector = styled.select`
   padding: 5px;
   border-radius: 5px;
   background: rgb(32 40 62 / 1);
@@ -43,7 +43,7 @@ export const Title = styled.h1`
   }
 `;
 
-export const BrandContainer = styled.div`
+export const Brand = styled.div`
   display: flex;
   align-items: center;
 `;
@@ -55,3 +55,9 @@ export const Image = styled.img`
     height: 1.5rem;
   }
 `;
+
+Header.Body = Body;
+Header.Selector = Selector;
+Header.Title = Title;
+Header.Brand = Brand;
+Header.Image = Image;
