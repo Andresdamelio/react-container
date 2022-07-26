@@ -34,7 +34,10 @@ const App = () => {
           </Container.Button>
         </Container.Group>
         {type !== undefined ? (
-          <Container.Button onClick={() => setType(undefined)}>
+          <Container.Button
+            data-testid='button-clean'
+            onClick={() => setType(undefined)}
+          >
             {t('clean')}
           </Container.Button>
         ) : null}

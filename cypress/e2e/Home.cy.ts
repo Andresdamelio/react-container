@@ -98,4 +98,14 @@ describe('Test home page', () => {
       );
     });
   });
+
+  describe('Test list clean button', () => {
+    it('The list should be removed after pressing the clean button.', () => {
+      cy.get('[data-testid="button-movies"]').click();
+
+      cy.get('[data-testid="list-movies"]').should('exist');
+      cy.get('[data-testid="button-clean"]').click();
+      cy.get('[data-testid="list-movies"]').should('not.exist');
+    });
+  });
 });
