@@ -1,11 +1,14 @@
 import { FooterBody, FooterContainer, FooterText } from './style';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <FooterContainer>
       <FooterBody>
         <FooterText>
-          Todos los derechos reservados &copy; {new Date().getFullYear()}
+          {t('rights')} &copy; {new Date().getFullYear()}
         </FooterText>
       </FooterBody>
     </FooterContainer>
