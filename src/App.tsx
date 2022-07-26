@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Layout } from './layout';
-import { Container, List, Title, Body } from './style';
+import { Container, List } from './style';
 import Loader from './components/Loader';
 
 const Movies = React.lazy(() => import('movies/Movies'));
@@ -17,8 +17,9 @@ const App = () => {
       <Container>
         <Container.Group>
           <Container.Button
-            active={type === 'movies'}
             mright
+            active={type === 'movies'}
+            data-testid='button-movies'
             onClick={() => setType('movies')}
           >
             {t('movies')}
@@ -26,6 +27,7 @@ const App = () => {
 
           <Container.Button
             active={type === 'tv'}
+            data-testid='button-tv'
             onClick={() => setType('tv')}
           >
             {t('tv')}
@@ -41,7 +43,7 @@ const App = () => {
       <React.Suspense fallback={<Loader />}>
         <List>
           {type !== undefined && (
-            <List.Title>
+            <List.Title data-testid='list-title'>
               {type === 'movies' ? t('moviesTitle') : t('tvTitles')}
             </List.Title>
           )}

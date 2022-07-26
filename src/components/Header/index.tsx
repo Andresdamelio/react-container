@@ -10,12 +10,14 @@ const HeaderPage = () => {
       <Header.Body>
         <Header.Brand>
           <Header.Image
+            data-testid='header-image'
             src={require('../../assets/img/logo-n5.svg').default}
             alt='logo'
           />
-          <Header.Title>{t('title')}</Header.Title>
+          <Header.Title data-testid='header-title'>{t('title')}</Header.Title>
         </Header.Brand>
         <Header.Selector
+          data-testid='header-selector'
           value={i18n.language}
           onChange={(e: React.MouseEvent<HTMLElement>) =>
             i18n.changeLanguage((e.target as any).value)

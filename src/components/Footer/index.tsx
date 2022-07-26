@@ -7,7 +7,7 @@ const FooterPage = () => {
   return (
     <Footer>
       <Footer.Body>
-        <Footer.Text>
+        <Footer.Text data-testid='footer-text'>
           {t('rights')} &copy; {new Date().getFullYear()}
         </Footer.Text>
       </Footer.Body>
