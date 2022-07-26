@@ -8,4 +8,8 @@ export const Main = styled.main`
   max-width: 1280px;
   margin: 0 auto;
   min-height: 100vh;
+
+  @media (max-width: 1280px) {
+    padding: 0 20px;
+  }
 `;
